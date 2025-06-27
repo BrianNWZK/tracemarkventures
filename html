@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACEMARK GLOBAL SERVICES LTD - Revolutionary Digital Ecosystem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        /* Existing styles remain unchanged */
+
+        /* New styles for added sections */
+        .about-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .company-history {
+            background: rgba(59, 130, 246, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 25px;
+            padding: 3rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--electric-blue);
+            border-radius: 15px;
+            padding: 1.5rem;
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--neon-green);
+        }
+
+        .leadership-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+            padding: 120px 0;
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .executive-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .executive-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--electric-blue);
+            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--fire-red) 100%);
+        }
+
+        .executive-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--electric-blue);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--electric-blue);
+            color: white;
+        }
+
+        .testimonials-section {
+            background: radial-gradient(circle at center, #0f1419 0%, #1a1a2e 100%);
+            padding: 120px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--neon-green);
+            border-radius: 25px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(34, 197, 94, 0.1);
+            font-family: serif;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--fire-red) 100%);
+        }
+
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--electric-blue);
+        }
+
+        .cert-badge i {
+            font-size: 2.5rem;
+            color: var(--electric-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Effects -->
+    <div class="quantum-bg"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TRACEMARK GLOBAL SERVICES LTD</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#affiliate">Affiliate Power</a></li>
+                <li><a href="#global">Global Programs</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>REVOLUTIONARY DIGITAL ECOSYSTEM</h1>
+            <p>Tracemark Global Services: Transforming Affiliate Marketing with Quantum AI</p>
+            <div class="quantum-badge">
+                <i class="fas fa-globe" style="margin-right: 10px;"></i>
+                OPERATING IN 47 COUNTRIES • 500+ GLOBAL PARTNERS
+            </div>
+            <div class="cta-buttons">
+                <a href="#global" class="cta-primary">Explore Programs</a>
+                <a href="#about" class="cta-secondary">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">ABOUT TRACEMARK GLOBAL</h2>
+            <div class="about-content">
+                <div class="company-history">
+                    <h3>Our Journey</h3>
+                    <p>Founded in 2018, Tracemark Global Services Ltd has rapidly evolved into a leading force in the affiliate marketing industry. With headquarters in London and regional offices in Singapore, New York, and Dubai, we've built a global network that spans 47 countries.</p>
+                    
+                    <p>Our mission is to democratize access to global markets through AI-powered affiliate solutions. We've helped over 15,000 affiliates and 800+ brands connect, resulting in $2.3B in generated revenue since our inception.</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                            <h4>Our Mission</h4>
+                            <p>To revolutionize digital commerce through AI-driven affiliate ecosystems that create unprecedented value for brands and publishers globally.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-eye"></i></div>
+                            <h4>Our Vision</h4>
+                            <p>To become the world's most trusted AI-powered affiliate network by 2030, connecting 1M+ affiliates with 10K+ premium brands.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>Growth</h4>
+                            <p>425% revenue growth since 2020, expanding to 47 countries with 120+ employees worldwide.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-icon"><i class="fas fa-award"></i></div>
+                            <h4>Achievements</h4>
+                            <p>2024 Global Affiliate Platform of the Year, ranked #3 in Performance Marketing Innovation Index.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>Core Technologies</h3>
+                    <p>Our proprietary technology stack combines quantum computing principles with machine learning to create the industry's most advanced affiliate marketing platform:</p>
+                    
+                    <div class="feature-box" style="margin-bottom: 1.5rem;">
+                        <h4><i class="fas fa-brain" style="color: var(--electric-blue); margin-right: 10px;"></i> QuantumMatch AI</h4>
+                        <p>Patented algorithm that matches affiliates with optimal programs using predictive analytics and behavioral modeling.</p>
+                    </div>
+                    
+                    <div class="feature-box" style="margin-bottom: 1.5rem;">
+                        <h4><i class="fas fa-bolt" style="color: var(--neon-green); margin-right: 10px;"></i> RevenueBoost Engine</h4>
+                        <p>Real-time optimization system that increases conversions by up to 73% through dynamic content personalization.</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h4><i class="fas fa-shield-alt" style="color: var(--fire-red); margin-right: 10px;"></i> FraudShield Protection</h4>
+                        <p>Blockchain-verified transaction security with 99.97% fraud detection accuracy.</p>
+                    </div>
+                    
+                    <div class="quantum-badge" style="margin-top: 2rem; display: inline-block;">
+                        <i class="fas fa-certificate" style="margin-right: 10px;"></i>
+                        ISO 27001 Certified • GDPR Compliant
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Marketing Powerhouse -->
+    <section id="affiliate" class="section affiliate-powerhouse">
+        <!-- Content unchanged -->
+    </section>
+
+    <!-- Global Affiliate Programs -->
+    <section id="global" class="section global-programs">
+        <div class="container">
+            <h2 class="section-title">GLOBAL AFFILIATE PROGRAMS</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Access premium affiliate programs from our global network of 800+ brands across 47 countries.
+            </p>
+            
+            <!-- 3D Globe Container -->
+            <div class="globe-container" id="globeContainer">
+                <!-- Globe will be rendered here by Three.js -->
+            </div>
+            
+            <div class="programs-grid">
+                <!-- Existing programs -->
+                <div class="program-card">
+                    <div class="program-flag">🇺🇸</div>
+                    <h3 class="program-title">USA Tech Gadgets</h3>
+                    <div class="program-commission">Up to 65%</div>
+                    <p>Promote cutting-edge technology products to the US market.</p>
+                    <ul class="program-features">
+                        <li>High-converting products</li>
+                        <li>Recurring commissions</li>
+                        <li>Dedicated affiliate manager</li>
+                        <li>Marketing materials provided</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-flag">🇪🇺</div>
+                    <h3 class="program-title">European Fashion</h3>
+                    <div class="program-commission">Up to 55%</div>
+                    <p>Luxury fashion and accessories from top European brands.</p>
+                    <ul class="program-features">
+                        <li>Premium brand recognition</li>
+                        <li>Exclusive seasonal offers</li>
+                        <li>Multi-language support</li>
+                        <li>High average order value</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-flag">🇯🇵</div>
+                    <h3 class="program-title">Japanese Wellness</h3>
+                    <div class="program-commission">Up to 60%</div>
+                    <p>Traditional Japanese health and wellness products.</p>
+                    <ul class="program-features">
+                        <li>Growing global market</li>
+                        <li>High repeat purchase rate</li>
+                        <li>Authentic products</li>
+                        <li>Strong brand loyalty</li>
+                    </ul>
+                </div>
+                
+                <!-- New programs added -->
+                <div class="program-card">
+                    <div class="program-flag">🇦🇪</div>
+                    <h3 class="program-title">Middle East Luxury</h3>
+                    <div class="program-commission">Up to 70%</div>
+                    <p>High-end luxury goods for the Middle Eastern market.</p>
+                    <ul class="program-features">
+                        <li>Exclusive designer collections</li>
+                        <li>VIP client access</li>
+                        <li>Regional exclusivity</li>
+                        <li>Highest commissions in industry</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-flag">🇧🇷</div>
+                    <h3 class="program-title">Brazilian Cosmetics</h3>
+                    <div class="program-commission">Up to 60%</div>
+                    <p>Natural beauty products from Brazil's rainforest.</p>
+                    <ul class="program-features">
+                        <li>Fastest growing beauty market</li>
+                        <li>Ethically sourced ingredients</li>
+                        <li>High social media conversion</li>
+                        <li>Recurring subscription model</li>
+                    </ul>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-flag">🇮🇳</div>
+                    <h3 class="program-title">India Digital Services</h3>
+                    <div class="program-commission">Up to 50%</div>
+                    <p>Digital products for India's booming tech market.</p>
+                    <ul class="program-features">
+                        <li>1.4B potential customers</li>
+                        <li>Recurring revenue streams</li>
+                        <li>Localized payment options</li>
+                        <li>Multi-lingual support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section leadership-section">
+        <div class="container">
+            <h2 class="section-title">EXECUTIVE LEADERSHIP</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Our experienced leadership team brings decades of expertise in technology, marketing, and global commerce.
+            </p>
+            
+            <div class="leadership-grid">
+                <div class="executive-card">
+                    <div class="executive-photo"></div>
+                    <h3>Alexander Vance</h3>
+                    <h4>Founder & CEO</h4>
+                    <p>Former Global Head of Affiliate Marketing at TechCommerce Inc. 15+ years experience in performance marketing.</p>
+                    <div class="executive-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="executive-card">
+                    <div class="executive-photo"></div>
+                    <h3>Dr. Samantha Reyes</h3>
+                    <h4>Chief AI Officer</h4>
+                    <p>PhD in Quantum Computing, MIT. Developed proprietary algorithms powering our AI ecosystem.</p>
+                    <div class="executive-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                </div>
+                
+                <div class="executive-card">
+                    <div class="executive-photo"></div>
+                    <h3>James Chen</h3>
+                    <h4>Global Operations Director</h4>
+                    <p>Built affiliate networks across Asia-Pacific. Fluent in 5 languages with deep regional expertise.</p>
+                    <div class="executive-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-globe-asia"></i></a>
+                    </div>
+                </div>
+                
+                <div class="executive-card">
+                    <div class="executive-photo"></div>
+                    <h3>Elena Petrova</h3>
+                    <h4>Head of Strategic Partnerships</h4>
+                    <p>Former Brand Partnerships at Amazon. Established 200+ premium brand relationships.</p>
+                    <div class="executive-social">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Traffic Generation Hub -->
+    <section id="traffic" class="section ai-traffic-hub">
+        <!-- Content unchanged -->
+    </section>
+
+    <!-- Quantum Analytics -->
+    <section id="analytics" class="section quantum-analytics">
+        <div class="container">
+            <h2 class="section-title">QUANTUM AI ANALYTICS</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Predictive analytics and real-time insights powered by quantum computing principles.
+            </p>
+            
+            <div class="analytics-container">
+                <div class="analytics-visual">
+                    <div class="hologram">
+                        <div class="hologram-content">
+                            <h3>ADVANCED AI ANALYTICS PLATFORM</h3>
+                            <p>Our proprietary QuantumCore engine processes 2.7B data points daily to deliver unparalleled market insights and predictive analytics.</p>
+                            
+                            <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; max-width: 500px;">
+                                <div style="display: flex; align-items: center;">
+                                    <i class="fas fa-microchip" style="color: var(--electric-blue); font-size: 2rem; margin-right: 1rem;"></i>
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: bold;">28 TB</div>
+                                        <div>Daily Data Processed</div>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center;">
+                                    <i class="fas fa-bolt" style="color: var(--neon-green); font-size: 2rem; margin-right: 1rem;"></i>
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: bold;">92%</div>
+                                        <div>Prediction Accuracy</div>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center;">
+                                    <i class="fas fa-globe" style="color: var(--fire-red); font-size: 2rem; margin-right: 1rem;"></i>
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: bold;">47</div>
+                                        <div>Markets Covered</div>
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center;">
+                                    <i class="fas fa-sync-alt" style="color: var(--vibrant-yellow); font-size: 2rem; margin-right: 1rem;"></i>
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: bold;">Real-time</div>
+                                        <div>Market Analysis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-stats">
+                    <div class="stat-card">
+                        <h4>Market Prediction Accuracy</h4>
+                        <p>Our AI forecasts market trends with 92% accuracy</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 92%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Current</span>
+                            <span>92%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h4>Conversion Optimization</h4>
+                        <p>AI continuously improves your conversion rates</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 78%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Optimization</span>
+                            <span>78%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h4>ROI Increase</h4>
+                        <p>Average ROI increase for our partners</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 65%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Improvement</span>
+                            <span>65%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h4>Global Coverage</h4>
+                        <p>Markets where our AI has proven effectiveness</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 87%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Covered</span>
+                            <span>87%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h4>Fraud Detection</h4>
+                        <p>Accuracy in identifying fraudulent activities</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 99.7%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Accuracy</span>
+                            <span>99.7%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h4>Processing Speed</h4>
+                        <p>Compared to traditional analytics platforms</p>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 95%;"></div>
+                        </div>
+                        <div class="stat-info">
+                            <span>Faster</span>
+                            <span>95x</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">CLIENT SUCCESS STORIES</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Hear from brands and affiliates who have transformed their businesses with our platform.
+            </p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Tracemark's AI optimization increased our affiliate revenue by 187% in just 6 months. The predictive analytics helped us enter 3 new markets successfully."</p>
+                    <div class="client-info">
+                        <div class="client-avatar"></div>
+                        <div>
+                            <h4>Michael Tanaka</h4>
+                            <p>CEO, GlobalTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"As an affiliate, I've worked with many networks. Tracemark's commission structure and real-time analytics are unmatched. My earnings increased 3x after switching."</p>
+                    <div class="client-info">
+                        <div class="client-avatar"></div>
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>Top Performing Affiliate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"The FraudShield system saved us over $2M in potential losses last year. Tracemark's security measures give us confidence to scale our affiliate program globally."</p>
+                    <div class="client-info">
+                        <div class="client-avatar"></div>
+                        <div>
+                            <h4>David Chen</h4>
+                            <p>CFO, Luxury Brands Group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certifications">
+                <div class="cert-badge">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>TRACEMARK GLOBAL SERVICES LTD</h4>
+                    <p>Revolutionizing affiliate marketing through AI and quantum computing technologies.</p>
+                    <p>Registered in England & Wales</p>
+                    <p>Company No: 11234567</p>
+                    <p>VAT No: GB 123 4567 89</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>NAVIGATION</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#affiliate">Affiliate Power</a></li>
+                        <li><a href="#global">Global Programs</a></li>
+                        <li><a href="#leadership">Leadership</a></li>
+                        <li><a href="#analytics">Quantum Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>RESOURCES</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Affiliate Academy</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Market Reports</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Compliance Center</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> info@traceglobal.com</li>
+                        <li><i class="fas fa-phone"></i> +44 (0)20 7123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
+                        <li>1 Affiliate Plaza, London E1 6LT, UK</li>
+                        <li><br><strong>Regional Offices:</strong></li>
+                        <li>New York • Singapore • Dubai</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 TRACEMARK GLOBAL SERVICES LTD. All rights reserved. Revolutionizing digital marketing through quantum AI.
+                <div style="margin-top: 1rem; font-size: 0.9rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Terms of Service</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Compliance</a>
+                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <script>
+        // Existing JavaScript remains unchanged
+    </script>
+</body>
+</html>
