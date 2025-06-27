@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRACEMARK GLOBAL - Revolutionary Digital Ecosystem</title>
+    <title>TRACEMARK VENTURES - Affiliate Marketing Innovation Leader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <style>
         :root {
-            --primary-green: #2c5530;
-            --dark-green: #1a472a;
-            --accent-gold: #f5d742;
-            --deep-gold: #e8b339;
-            --cyber-blue: #00d4ff;
-            --neon-purple: #8b5cf6;
-            --electric-pink: #ff6b9d;
-            --quantum-orange: #ff8c42;
-            --hologram-green: #39ff14;
-            --matrix-green: #00ff41;
-            --cosmic-purple: #6366f1;
+            --primary-blue: #0a1a3a;
+            --deep-navy: #06122b;
+            --corporate-blue: #1a3b7a;
+            --accent-blue: #2a5cb0;
+            --innovation-teal: #00c1d4;
+            --growth-green: #2dd4bf;
+            --vibrant-orange: #ff8c42;
+            --tech-purple: #8b5cf6;
+            --light-accent: #f0f7ff;
+            --deep-space: #040b1a;
         }
 
         * {
@@ -34,7 +33,7 @@
             line-height: 1.6;
             color: #fff;
             overflow-x: hidden;
-            background: #0a0a0a;
+            background: var(--deep-space);
             cursor: none;
         }
 
@@ -43,7 +42,7 @@
             position: fixed;
             width: 20px;
             height: 20px;
-            border: 2px solid var(--cyber-blue);
+            border: 2px solid var(--innovation-teal);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
@@ -55,7 +54,7 @@
             position: fixed;
             width: 8px;
             height: 8px;
-            background: var(--electric-pink);
+            background: var(--vibrant-orange);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9998;
@@ -71,10 +70,10 @@
             height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(circle at 20% 20%, var(--cyber-blue) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, var(--neon-purple) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, var(--electric-pink) 0%, transparent 50%),
-                radial-gradient(circle at 60% 10%, var(--hologram-green) 0%, transparent 30%);
+                radial-gradient(circle at 20% 20%, var(--accent-blue) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, var(--growth-green) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, var(--tech-purple) 0%, transparent 50%),
+                radial-gradient(circle at 60% 10%, var(--vibrant-orange) 0%, transparent 30%);
             animation: quantumShift 20s ease-in-out infinite;
         }
 
@@ -99,7 +98,7 @@
         .matrix-column {
             position: absolute;
             top: -100%;
-            color: var(--matrix-green);
+            color: var(--innovation-teal);
             font-family: 'Courier New', monospace;
             font-size: 14px;
             animation: matrixFall linear infinite;
@@ -124,7 +123,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: var(--cyber-blue);
+            background: var(--innovation-teal);
             border-radius: 50%;
             opacity: 0.7;
             animation: float 15s infinite ease-in-out;
@@ -142,19 +141,20 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(10, 26, 58, 0.85);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50px;
             padding: 15px 30px;
             z-index: 1000;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         nav:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(26, 59, 122, 0.9);
             transform: translateX(-50%) translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(42, 92, 176, 0.3);
         }
 
         .nav-container {
@@ -166,7 +166,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--cyber-blue) 100%);
+            background: linear-gradient(135deg, var(--vibrant-orange) 0%, var(--innovation-teal) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
@@ -222,6 +222,7 @@
             position: relative;
             overflow: hidden;
             perspective: 1000px;
+            background: radial-gradient(circle at center, var(--deep-navy) 0%, var(--primary-blue) 100%);
         }
 
         .hero-content {
@@ -236,17 +237,17 @@
             font-size: 5rem;
             margin-bottom: 1rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #fff 0%, var(--cyber-blue) 30%, var(--electric-pink) 60%, var(--hologram-green) 100%);
+            background: linear-gradient(135deg, #fff 0%, var(--innovation-teal) 30%, var(--vibrant-orange) 60%, var(--growth-green) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textGlow 3s ease-in-out infinite alternate, textFloat 6s ease-in-out infinite;
             transform: translateZ(50px);
-            text-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+            text-shadow: 0 0 50px rgba(0, 193, 212, 0.5);
         }
 
         @keyframes textGlow {
-            from { filter: drop-shadow(0 0 20px var(--cyber-blue)) hue-rotate(0deg); }
-            to { filter: drop-shadow(0 0 40px var(--electric-pink)) hue-rotate(180deg); }
+            from { filter: drop-shadow(0 0 20px var(--innovation-teal)) hue-rotate(0deg); }
+            to { filter: drop-shadow(0 0 40px var(--vibrant-orange)) hue-rotate(180deg); }
         }
 
         @keyframes textFloat {
@@ -260,13 +261,13 @@
             opacity: 0.9;
             animation: slideUp 1s ease-out 0.2s both;
             transform: translateZ(30px);
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(0,212,255,0.8) 100%);
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(0,193,212,0.8) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .quantum-badge {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.3) 0%, rgba(255, 107, 157, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(42, 92, 176, 0.3) 0%, rgba(255, 140, 66, 0.3) 100%);
             backdrop-filter: blur(15px);
             border: 2px solid rgba(255, 255, 255, 0.3);
             padding: 20px 40px;
@@ -300,13 +301,13 @@
         @keyframes quantumPulse {
             0%, 100% { 
                 transform: translateZ(40px) scale(1); 
-                box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
-                border-color: rgba(0, 212, 255, 0.5);
+                box-shadow: 0 0 30px rgba(42, 92, 176, 0.4);
+                border-color: rgba(42, 92, 176, 0.5);
             }
             50% { 
                 transform: translateZ(40px) scale(1.05); 
-                box-shadow: 0 0 50px rgba(255, 107, 157, 0.6);
-                border-color: rgba(255, 107, 157, 0.7);
+                box-shadow: 0 0 50px rgba(255, 140, 66, 0.6);
+                border-color: rgba(255, 140, 66, 0.7);
             }
         }
 
@@ -334,21 +335,21 @@
         }
 
         .cta-primary {
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 50%, var(--hologram-green) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             color: white;
-            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 193, 212, 0.4);
         }
 
         .cta-secondary {
             background: transparent;
             color: white;
-            border: 2px solid var(--cyber-blue);
+            border: 2px solid var(--innovation-teal);
             backdrop-filter: blur(10px);
         }
 
         .cta-primary:hover, .cta-secondary:hover {
             transform: translateY(-8px) rotateX(10deg);
-            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.6);
+            box-shadow: 0 25px 50px rgba(0, 193, 212, 0.6);
         }
 
         .cta-primary::before, .cta-secondary::before {
@@ -373,14 +374,14 @@
             right: 30px;
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             z-index: 1000;
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 193, 212, 0.4);
             animation: assistantPulse 3s ease-in-out infinite;
             border: 3px solid rgba(255, 255, 255, 0.3);
         }
@@ -393,7 +394,7 @@
         .ai-assistant:hover {
             animation-play-state: paused;
             transform: scale(1.2);
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 140, 66, 0.6);
         }
 
         /* Section Containers */
@@ -416,7 +417,7 @@
             font-size: 3.5rem;
             margin-bottom: 4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 50%, var(--hologram-green) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
@@ -424,8 +425,8 @@
         }
 
         @keyframes titleGlow {
-            from { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3)); }
-            to { filter: drop-shadow(0 0 40px rgba(255, 107, 157, 0.5)); }
+            from { filter: drop-shadow(0 0 20px rgba(0, 193, 212, 0.3)); }
+            to { filter: drop-shadow(0 0 40px rgba(255, 140, 66, 0.5)); }
         }
 
         .section-title::after {
@@ -436,7 +437,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, var(--cyber-blue), var(--electric-pink));
+            background: linear-gradient(90deg, var(--innovation-teal), var(--vibrant-orange));
             border-radius: 2px;
             animation: lineGrow 2s ease-out;
         }
@@ -446,15 +447,15 @@
             to { width: 100px; }
         }
 
-        /* REVOLUTIONARY AFFILIATE MARKETING POWERHOUSE */
-        .affiliate-powerhouse {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            padding: 200px 0;
+        /* TRACEMARK VENTURES SECTION */
+        .ventures-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-navy) 100%);
+            padding: 150px 0;
             position: relative;
             overflow: hidden;
         }
 
-        .affiliate-powerhouse::before {
+        .ventures-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -462,8 +463,8 @@
             right: 0;
             bottom: 0;
             background: 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,212,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'),
-                radial-gradient(circle at 30% 30%, rgba(255, 107, 157, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 30% 30%, rgba(0, 193, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 140, 66, 0.1) 0%, transparent 50%);
             animation: gridMove 20s linear infinite;
         }
 
@@ -472,217 +473,82 @@
             100% { transform: translate(20px, 20px) rotate(360deg); }
         }
 
-        .affiliate-hero-content {
+        .ventures-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            gap: 4rem;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
-        .affiliate-text h2 {
-            font-size: 4rem;
+        .ventures-text h2 {
+            font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 30%, var(--hologram-green) 60%, var(--quantum-orange) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 2rem;
             line-height: 1.1;
-            animation: affiliateTextGlow 5s ease-in-out infinite alternate;
         }
 
-        @keyframes affiliateTextGlow {
-            from { filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.4)); }
-            to { filter: drop-shadow(0 0 50px rgba(255, 107, 157, 0.6)); }
-        }
-
-        .affiliate-features {
+        .ventures-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-box {
-            background: rgba(0, 212, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-box::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(transparent, var(--cyber-blue), transparent);
-            animation: rotate 4s linear infinite;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .feature-box:hover::before {
-            opacity: 0.1;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
-            border-color: var(--electric-pink);
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .affiliate-visual {
-            position: relative;
-            height: 600px;
-            border-radius: 25px;
-            overflow: hidden;
-        }
-
-        .ai-dashboard {
-            background: rgba(0, 0, 0, 0.9);
-            border: 2px solid var(--cyber-blue);
-            border-radius: 25px;
-            padding: 3rem;
-            position: relative;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden;
-        }
-
-        .ai-dashboard::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 48%, rgba(0, 212, 255, 0.05) 50%, transparent 52%);
-            animation: scanline 4s linear infinite;
-        }
-
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .dashboard-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--cyber-blue);
-        }
-
-        .status-indicators {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .status-dot {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            position: relative;
-        }
-
-        .status-dot::after {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            border-radius: 50%;
-            border: 2px solid currentColor;
-            animation: ripple 2s infinite;
-        }
-
-        @keyframes ripple {
-            0% { transform: scale(0.8); opacity: 1; }
-            100% { transform: scale(1.5); opacity: 0; }
-        }
-
-        .status-dot.active { background: var(--hologram-green); color: var(--hologram-green); }
-        .status-dot.processing { background: var(--quantum-orange); color: var(--quantum-orange); }
-        .status-dot.analyzing { background: var(--cyber-blue); color: var(--cyber-blue); }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-top: 2rem;
         }
 
-        .metric-card {
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 107, 157, 0.1) 100%);
-            border: 1px solid rgba(0, 212, 255, 0.3);
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--innovation-teal);
             border-radius: 15px;
             padding: 1.5rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
-        .metric-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: cardShimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes cardShimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .metric-value {
+        .stat-value {
             font-size: 2.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: block;
-            animation: countUp 2s ease-out;
         }
 
-        @keyframes countUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .metric-label {
+        .stat-label {
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.8);
             font-weight: 600;
         }
 
+        .ventures-visual {
+            position: relative;
+            height: 500px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--innovation-teal);
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ventures-logo {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(0, 193, 212, 0.5));
+            animation: logoFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+
         /* GLOBAL AFFILIATE PROGRAMS SHOWCASE */
         .global-programs {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
             padding: 150px 0;
             position: relative;
             overflow: hidden;
@@ -695,7 +561,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 70% 70%, rgba(57, 255, 20, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 70% 70%, rgba(45, 212, 191, 0.1) 0%, transparent 50%);
             animation: globalPulse 8s ease-in-out infinite;
         }
 
@@ -712,7 +578,7 @@
             width: 80%;
             height: 60%;
             opacity: 0.1;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500"><path d="M100,100 Q200,50 300,100 T500,100 Q600,80 700,100 T900,100" stroke="rgba(0,212,255,0.3)" stroke-width="2" fill="none"/></svg>');
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500"><path d="M100,100 Q200,50 300,100 T500,100 Q600,80 700,100 T900,100" stroke="rgba(0,193,212,0.3)" stroke-width="2" fill="none"/></svg>');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -746,7 +612,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(transparent, var(--cyber-blue), transparent);
+            background: conic-gradient(transparent, var(--innovation-teal), transparent);
             animation: rotate 6s linear infinite;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -758,8 +624,8 @@
 
         .program-card:hover {
             transform: translateY(-20px) rotateX(10deg) rotateY(5deg);
-            box-shadow: 0 30px 60px rgba(0, 212, 255, 0.3);
-            border-color: var(--cyber-blue);
+            box-shadow: 0 30px 60px rgba(0, 193, 212, 0.3);
+            border-color: var(--innovation-teal);
         }
 
         .program-flag {
@@ -767,7 +633,7 @@
             height: 45px;
             border-radius: 10px;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -804,7 +670,7 @@
         .program-commission {
             font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--hologram-green) 0%, var(--quantum-orange) 100%);
+            background: linear-gradient(135deg, var(--growth-green) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
@@ -826,13 +692,13 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--hologram-green);
+            color: var(--growth-green);
             font-weight: bold;
         }
 
         /* AI TRAFFIC GENERATION HUB */
         .ai-traffic-hub {
-            background: radial-gradient(circle at center, #0f1419 0%, #1a1a2e 100%);
+            background: radial-gradient(circle at center, var(--deep-space) 0%, var(--deep-navy) 100%);
             padding: 180px 0;
             position: relative;
             overflow: hidden;
@@ -846,8 +712,8 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(255, 107, 157, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 25% 25%, rgba(0, 193, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 140, 66, 0.1) 0%, transparent 50%);
             animation: hubPulse 12s ease-in-out infinite alternate;
         }
 
@@ -865,7 +731,7 @@
 
         .channel-card {
             background: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--cyber-blue);
+            border: 1px solid var(--innovation-teal);
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
@@ -881,14 +747,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent 48%, rgba(0, 212, 255, 0.05) 50%, transparent 52%);
+            background: linear-gradient(45deg, transparent 48%, rgba(0, 193, 212, 0.05) 50%, transparent 52%);
             animation: scanline 4s linear infinite;
         }
 
         .channel-icon {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -919,7 +785,7 @@
         .stat-value {
             font-size: 1.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--hologram-green) 0%, var(--quantum-orange) 100%);
+            background: linear-gradient(135deg, var(--growth-green) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -931,7 +797,7 @@
 
         /* QUANTUM ANALYTICS SECTION */
         .quantum-analytics {
-            background: linear-gradient(135deg, #0a0a0a 0%, #0f172a 100%);
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--primary-blue) 100%);
             padding: 180px 0;
             position: relative;
             overflow: hidden;
@@ -948,7 +814,7 @@
             height: 500px;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 25px;
-            border: 2px solid var(--cyber-blue);
+            border: 2px solid var(--innovation-teal);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -974,7 +840,7 @@
         .hologram-content h3 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--electric-pink) 100%);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -993,7 +859,7 @@
 
         .stat-card {
             background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--cyber-blue);
+            border: 1px solid var(--innovation-teal);
             border-radius: 15px;
             padding: 1.5rem;
             position: relative;
@@ -1007,7 +873,7 @@
             left: 0;
             width: 8px;
             height: 100%;
-            background: var(--cyber-blue);
+            background: var(--innovation-teal);
         }
 
         .stat-card h4 {
@@ -1027,7 +893,7 @@
 
         .stat-progress {
             height: 100%;
-            background: linear-gradient(90deg, var(--cyber-blue), var(--electric-pink));
+            background: linear-gradient(90deg, var(--innovation-teal), var(--vibrant-orange));
             border-radius: 4px;
             animation: progressGrow 2s ease-out;
         }
@@ -1044,7 +910,7 @@
 
         /* FOOTER SECTION */
         footer {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--primary-blue) 100%);
             padding: 80px 0 40px;
             position: relative;
             overflow: hidden;
@@ -1059,7 +925,7 @@
         .footer-column h4 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: var(--cyber-blue);
+            color: var(--innovation-teal);
         }
 
         .footer-links {
@@ -1077,7 +943,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--cyber-blue);
+            color: var(--innovation-teal);
             padding-left: 5px;
         }
 
@@ -1095,13 +961,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--cyber-blue);
+            color: var(--innovation-teal);
             font-size: 1.2rem;
             transition: all 0.3s ease;
         }
 
         .social-icon:hover {
-            background: var(--cyber-blue);
+            background: var(--innovation-teal);
             color: white;
             transform: translateY(-5px);
         }
@@ -1122,8 +988,8 @@
             margin: 3rem auto;
             border-radius: 25px;
             overflow: hidden;
-            border: 2px solid var(--cyber-blue);
-            box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);
+            border: 2px solid var(--innovation-teal);
+            box-shadow: 0 0 50px rgba(0, 193, 212, 0.3);
         }
 
         /* Responsive Design */
@@ -1132,7 +998,7 @@
                 font-size: 3.5rem;
             }
             
-            .affiliate-hero-content {
+            .ventures-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1151,7 +1017,7 @@
                 display: none;
             }
             
-            .affiliate-features {
+            .ventures-stats {
                 grid-template-columns: 1fr;
             }
             
@@ -1174,9 +1040,9 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">TRACEMARK GLOBAL</div>
+            <div class="logo">TRACEMARK VENTURES</div>
             <ul class="nav-links">
-                <li><a href="#affiliate">Affiliate Power</a></li>
+                <li><a href="#ventures">Our Ventures</a></li>
                 <li><a href="#global">Global Programs</a></li>
                 <li><a href="#traffic">AI Traffic</a></li>
                 <li><a href="#analytics">Analytics</a></li>
@@ -1188,92 +1054,70 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>REVOLUTIONIZE YOUR AFFILIATE MARKETING</h1>
-            <p>Powered by Quantum AI and Global Partnerships</p>
+            <h1>REVOLUTIONIZING AFFILIATE MARKETING</h1>
+            <p>Powered by TRACEMARK VENTURES - The Global Leader in Performance Marketing</p>
             <div class="quantum-badge">
                 <i class="fas fa-bolt" style="margin-right: 10px;"></i>
-                NEXT-GEN AFFILIATE MARKETING PLATFORM
+                INNOVATION • PERFORMANCE • GROWTH
             </div>
             <div class="cta-buttons">
-                <a href="#global" class="cta-primary">Explore Programs</a>
-                <a href="#traffic" class="cta-secondary">AI Demo</a>
+                <a href="#ventures" class="cta-primary">Explore Ventures</a>
+                <a href="#global" class="cta-secondary">Partner With Us</a>
             </div>
         </div>
     </section>
 
-    <!-- Affiliate Marketing Powerhouse -->
-    <section id="affiliate" class="section affiliate-powerhouse">
+    <!-- TRACEMARK VENTURES SECTION -->
+    <section id="ventures" class="section ventures-section">
         <div class="container">
-            <h2 class="section-title">REVOLUTIONARY AFFILIATE MARKETING POWERHOUSE</h2>
-            <div class="affiliate-hero-content">
-                <div class="affiliate-text">
-                    <h2>Maximize Earnings with AI-Powered Affiliate Solutions</h2>
-                    <p>Our proprietary AffiliateMarketingAI technology revolutionizes how you promote products and services worldwide. Leverage our quantum analytics to boost conversions and revenue.</p>
+            <h2 class="section-title">TRACEMARK VENTURES</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
+                Leading the charge in affiliate marketing innovation since 2018
+            </p>
+            
+            <div class="ventures-content">
+                <div class="ventures-text">
+                    <h2>The Future of Performance Marketing</h2>
+                    <p>TRACEMARK VENTURES is the innovative subsidiary of TRACEMARK GLOBAL SERVICES LTD, dedicated to revolutionizing the affiliate marketing landscape. We combine cutting-edge technology with strategic partnerships to create unparalleled growth opportunities for brands and affiliates worldwide.</p>
                     
-                    <div class="affiliate-features">
-                        <div class="feature-box">
-                            <h3><i class="fas fa-globe-americas" style="color: var(--cyber-blue); margin-right: 10px;"></i> Global Reach</h3>
-                            <p>Access affiliate programs in over 100 countries with localized strategies.</p>
+                    <p>Our proprietary AffiliateMarketingAI platform leverages quantum computing principles to optimize campaigns in real-time, delivering unprecedented ROI for our partners. With a global network spanning 47 countries, we've generated over $2.3B in revenue for our clients since inception.</p>
+                    
+                    <div class="ventures-stats">
+                        <div class="stat-card">
+                            <span class="stat-value">$2.3B+</span>
+                            <span class="stat-label">Revenue Generated</span>
                         </div>
-                        <div class="feature-box">
-                            <h3><i class="fas fa-robot" style="color: var(--electric-pink); margin-right: 10px;"></i> AI Optimization</h3>
-                            <p>Our AI analyzes performance and optimizes campaigns in real-time.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">47</span>
+                            <span class="stat-label">Global Markets</span>
                         </div>
-                        <div class="feature-box">
-                            <h3><i class="fas fa-chart-line" style="color: var(--hologram-green); margin-right: 10px;"></i> Performance Tracking</h3>
-                            <p>Real-time analytics dashboard to monitor all your campaigns.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">800+</span>
+                            <span class="stat-label">Brand Partners</span>
                         </div>
-                        <div class="feature-box">
-                            <h3><i class="fas fa-wallet" style="color: var(--quantum-orange); margin-right: 10px;"></i> Higher Commissions</h3>
-                            <p>Earn up to 75% commissions with our premium partner programs.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">15K+</span>
+                            <span class="stat-label">Active Affiliates</span>
                         </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="#global" class="cta-primary" style="display: inline-block; margin-right: 1rem;">Join Our Network</a>
+                        <a href="#analytics" class="cta-secondary">View Our Technology</a>
                     </div>
                 </div>
-                <div class="affiliate-visual">
-                    <div class="ai-dashboard">
-                        <div class="dashboard-header">
-                            <div class="dashboard-title">AFFILIATE AI DASHBOARD</div>
-                            <div class="status-indicators">
-                                <div class="status-dot active"></div>
-                                <div class="status-dot processing"></div>
-                                <div class="status-dot analyzing"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <span class="metric-value">$42,580</span>
-                                <span class="metric-label">Monthly Revenue</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-value">3,258</span>
-                                <span class="metric-label">New Leads</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-value">24.7%</span>
-                                <span class="metric-label">Conversion Rate</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-value">78%</span>
-                                <span class="metric-label">AI Optimization</span>
-                            </div>
-                        </div>
-                        
-                        <div class="ai-graph">
-                            <div style="background: rgba(255,255,255,0.1); height: 150px; border-radius: 10px; position: relative;">
-                                <div style="position: absolute; bottom: 0; width: 20%; height: 70%; background: var(--cyber-blue);"></div>
-                                <div style="position: absolute; bottom: 0; left: 22%; width: 20%; height: 85%; background: var(--electric-pink);"></div>
-                                <div style="position: absolute; bottom: 0; left: 44%; width: 20%; height: 60%; background: var(--hologram-green);"></div>
-                                <div style="position: absolute; bottom: 0; left: 66%; width: 20%; height: 95%; background: var(--quantum-orange);"></div>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; margin-top: 10px; color: rgba(255,255,255,0.7);">
-                                <span>US</span>
-                                <span>EU</span>
-                                <span>ASIA</span>
-                                <span>GLOBAL</span>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="ventures-visual">
+                    <svg class="ventures-logo" viewBox="0 0 500 200">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00c1d4; stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff8c42; stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50,100 Q100,50 150,100 T250,100 Q300,80 350,100 T450,100" fill="none" stroke="url(#logo-gradient)" stroke-width="10" />
+                        <text x="250" y="150" text-anchor="middle" font-size="40" font-weight="bold" fill="url(#logo-gradient)">TRACEMARK VENTURES</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -1284,7 +1128,7 @@
         <div class="container">
             <h2 class="section-title">GLOBAL AFFILIATE PROGRAMS</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Access premium affiliate programs from around the world across various industries and markets.
+                Powered by TRACEMARK VENTURES - Access premium affiliate programs across diverse markets
             </p>
             
             <!-- 3D Globe Container -->
@@ -1331,6 +1175,19 @@
                         <li>Strong brand loyalty</li>
                     </ul>
                 </div>
+                
+                <div class="program-card">
+                    <div class="program-flag">🇦🇪</div>
+                    <h3 class="program-title">Middle East Luxury</h3>
+                    <div class="program-commission">Up to 70%</div>
+                    <p>High-end luxury goods for the Middle Eastern market.</p>
+                    <ul class="program-features">
+                        <li>Exclusive designer collections</li>
+                        <li>VIP client access</li>
+                        <li>Regional exclusivity</li>
+                        <li>Highest commissions in industry</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -1340,7 +1197,7 @@
         <div class="container">
             <h2 class="section-title">AI-POWERED TRAFFIC GENERATION</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Our Quantum AI drives targeted traffic through multiple channels to maximize your affiliate conversions.
+                TRACEMARK VENTURES drives targeted traffic through multiple channels to maximize conversions
             </p>
             
             <div class="channel-grid">
@@ -1349,7 +1206,7 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <h3>Website Integration</h3>
-                    <p>Seamlessly integrate affiliate offers into your existing websites with AI-optimized placements.</p>
+                    <p>Seamlessly integrate affiliate offers with AI-optimized placements.</p>
                     <div class="channel-stats">
                         <div class="stat-item">
                             <div class="stat-value">+42%</div>
@@ -1367,7 +1224,7 @@
                         <i class="fab fa-facebook"></i>
                     </div>
                     <h3>Social Media</h3>
-                    <p>AI-generated content and targeting for Facebook, Instagram, Twitter, and TikTok.</p>
+                    <p>AI-generated content and targeting across all major platforms.</p>
                     <div class="channel-stats">
                         <div class="stat-item">
                             <div class="stat-value">2.7M</div>
@@ -1385,7 +1242,7 @@
                         <i class="fas fa-podcast"></i>
                     </div>
                     <h3>Podcast Network</h3>
-                    <p>Reach engaged audiences through our network of 500+ podcasts across various niches.</p>
+                    <p>Reach engaged audiences through our network of 500+ podcasts.</p>
                     <div class="channel-stats">
                         <div class="stat-item">
                             <div class="stat-value">15M</div>
@@ -1403,7 +1260,7 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email & Newsletter</h3>
-                    <p>AI-personalized email campaigns that convert subscribers into buyers.</p>
+                    <p>AI-personalized email campaigns that convert subscribers.</p>
                     <div class="channel-stats">
                         <div class="stat-item">
                             <div class="stat-value">38%</div>
@@ -1424,7 +1281,7 @@
         <div class="container">
             <h2 class="section-title">QUANTUM AI ANALYTICS</h2>
             <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Predictive analytics and real-time insights powered by quantum computing principles.
+                TRACEMARK VENTURES' predictive analytics and real-time insights
             </p>
             
             <div class="analytics-container">
@@ -1432,8 +1289,8 @@
                     <div class="hologram">
                         <div class="hologram-content">
                             <h3>REAL-TIME PERFORMANCE HOLOGRAM</h3>
-                            <p>Our quantum AI analyzes billions of data points to predict market trends and optimize your campaigns.</p>
-                            <div style="margin-top: 30px; display: inline-block; padding: 12px 30px; background: rgba(0,212,255,0.2); border-radius: 30px; border: 1px solid var(--cyber-blue);">
+                            <p>Our quantum AI analyzes billions of data points to predict market trends and optimize campaigns.</p>
+                            <div style="margin-top: 30px; display: inline-block; padding: 12px 30px; background: rgba(0,193,212,0.2); border-radius: 30px; border: 1px solid var(--innovation-teal);">
                                 <i class="fas fa-bolt"></i> LIVE DATA STREAMING
                             </div>
                         </div>
@@ -1498,8 +1355,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h4>TRACEMARK GLOBAL</h4>
-                    <p>Revolutionizing affiliate marketing through AI and quantum computing technologies.</p>
+                    <h4>TRACEMARK VENTURES</h4>
+                    <p>A subsidiary of TRACEMARK GLOBAL SERVICES LTD</p>
+                    <p>Leading affiliate marketing innovation since 2018</p>
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -1511,11 +1369,11 @@
                 <div class="footer-column">
                     <h4>NAVIGATION</h4>
                     <ul class="footer-links">
-                        <li><a href="#affiliate">Affiliate Power</a></li>
+                        <li><a href="#ventures">Our Ventures</a></li>
                         <li><a href="#global">Global Programs</a></li>
                         <li><a href="#traffic">AI Traffic</a></li>
-                        <li><a href="#analytics">Quantum Analytics</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#analytics">Analytics</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -1533,7 +1391,7 @@
                 <div class="footer-column">
                     <h4>CONTACT</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@traceglobal.com</li>
+                        <li><i class="fas fa-envelope"></i> ventures@tracemarkglobal.com</li>
                         <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
                         <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
                         <li>Silicon Valley, CA</li>
@@ -1542,7 +1400,7 @@
             </div>
             
             <div class="copyright">
-                &copy; 2025 TRACEMARK GLOBAL. All rights reserved. Revolutionizing digital marketing through quantum AI.
+                &copy; 2025 TRACEMARK VENTURES. All rights reserved. Revolutionizing affiliate marketing through quantum AI.
             </div>
         </div>
     </footer>
@@ -1657,7 +1515,7 @@
             // Add city lights
             const lights = [];
             for (let i = 0; i < 200; i++) {
-                const light = new THREE.PointLight(0x00d4ff, 0.8, 200);
+                const light = new THREE.PointLight(0x00c1d4, 0.8, 200);
                 const lat = Math.random() * Math.PI - Math.PI/2;
                 const lon = Math.random() * Math.PI * 2;
                 const radius = 101;
@@ -1673,7 +1531,7 @@
             }
             
             // Add connection lines
-            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00d4ff });
+            const lineMaterial = new THREE.LineBasicMaterial({ color: 0x00c1d4 });
             const connections = [];
             
             for (let i = 0; i < 20; i++) {
