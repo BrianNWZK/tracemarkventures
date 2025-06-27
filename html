@@ -3,305 +3,908 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRACEMARK GLOBAL SERVICES LTD - Revolutionary Digital Ecosystem</title>
+    <title>TRACEMARK VENTURES - Affiliate Marketing Innovation Leader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <style>
-        /* Existing styles remain unchanged */
+        :root {
+            --primary-blue: #0a1a3a;
+            --deep-navy: #06122b;
+            --corporate-blue: #1a3b7a;
+            --accent-blue: #2a5cb0;
+            --innovation-teal: #00c1d4;
+            --growth-green: #2dd4bf;
+            --vibrant-orange: #ff8c42;
+            --tech-purple: #8b5cf6;
+            --light-accent: #f0f7ff;
+            --deep-space: #040b1a;
+        }
 
-        /* New styles for added sections */
-        .about-section {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            padding: 120px 0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #fff;
+            overflow-x: hidden;
+            background: var(--deep-space);
+            position: relative;
+        }
+
+        /* Background Animation */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(42, 92, 176, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 10%, rgba(255, 140, 66, 0.1) 0%, transparent 30%);
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--innovation-teal);
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 26, 58, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 15px 30px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        nav.scrolled {
+            top: 10px;
+            padding: 10px 20px;
+            background: rgba(26, 59, 122, 0.95);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--vibrant-orange) 0%, var(--innovation-teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .nav-links a:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at center, var(--deep-navy) 0%, var(--primary-blue) 100%);
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 2rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, var(--innovation-teal) 30%, var(--vibrant-orange) 60%, var(--growth-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(0,193,212,0.8) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .quantum-badge {
+            background: linear-gradient(135deg, rgba(42, 92, 176, 0.3) 0%, rgba(255, 140, 66, 0.3) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            margin: 2rem 0;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .cta-primary, .cta-secondary {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 193, 212, 0.4);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--innovation-teal);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-primary:hover, .cta-secondary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 193, 212, 0.6);
+        }
+
+        /* Section Containers */
+        .section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--innovation-teal), var(--vibrant-orange));
+            border-radius: 2px;
+        }
+
+        /* TRACEMARK VENTURES SECTION */
+        .ventures-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-navy) 100%);
+        }
+
+        .ventures-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
             align-items: center;
         }
 
-        .company-history {
-            background: rgba(59, 130, 246, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 25px;
-            padding: 3rem;
+        @media (min-width: 992px) {
+            .ventures-content {
+                flex-direction: row;
+            }
         }
 
-        .values-grid {
+        .ventures-text {
+            flex: 1;
+        }
+
+        .ventures-text h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .ventures-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--innovation-teal);
+            border-radius: 15px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+        }
+
+        .ventures-visual {
+            flex: 1;
+            position: relative;
+            height: 400px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--innovation-teal);
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .ventures-logo {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+        }
+
+        /* GLOBAL AFFILIATE PROGRAMS SHOWCASE */
+        .global-programs {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-blue) 100%);
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: 1fr;
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .value-card {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--electric-blue);
-            border-radius: 15px;
-            padding: 1.5rem;
+        @media (min-width: 768px) {
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--neon-green);
+        @media (min-width: 1200px) {
+            .programs-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
-        .leadership-section {
-            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
-            padding: 120px 0;
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .executive-card {
+        .program-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
             padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
         }
 
-        .executive-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            border: 3px solid var(--electric-blue);
-            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--fire-red) 100%);
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 193, 212, 0.3);
+            border-color: var(--innovation-teal);
         }
 
-        .executive-social {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-link {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(59, 130, 246, 0.2);
+        .program-flag {
+            width: 60px;
+            height: 45px;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--electric-blue);
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--electric-blue);
+            font-weight: bold;
             color: white;
+            font-size: 1.2rem;
         }
 
-        .testimonials-section {
-            background: radial-gradient(circle at center, #0f1419 0%, #1a1a2e 100%);
-            padding: 120px 0;
+        .program-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+        .program-commission {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--growth-green) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
 
-        .testimonial-card {
-            background: rgba(0, 0, 0, 0.7);
-            border: 1px solid var(--neon-green);
-            border-radius: 25px;
-            padding: 2.5rem;
+        .program-features {
+            list-style: none;
+            margin: 1.2rem 0;
+        }
+
+        .program-features li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
             position: relative;
         }
 
-        .testimonial-card::before {
-            content: '"';
+        .program-features li::before {
+            content: '✓';
             position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(34, 197, 94, 0.1);
-            font-family: serif;
+            left: 0;
+            color: var(--growth-green);
+            font-weight: bold;
         }
 
-        .client-info {
-            display: flex;
-            align-items: center;
-            margin-top: 1.5rem;
+        /* AI TRAFFIC GENERATION HUB */
+        .ai-traffic-hub {
+            background: radial-gradient(circle at center, var(--deep-space) 0%, var(--deep-navy) 100%);
         }
 
-        .client-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 1rem;
-            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--fire-red) 100%);
-        }
-
-        .certifications {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
+        .channel-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
             margin-top: 3rem;
-            flex-wrap: wrap;
         }
 
-        .cert-badge {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: rgba(59, 130, 246, 0.1);
+        @media (min-width: 768px) {
+            .channel-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .channel-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .channel-card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--innovation-teal);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .channel-icon {
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .channel-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .channel-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .channel-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.2rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--growth-green) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* QUANTUM ANALYTICS SECTION */
+        .quantum-analytics {
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--primary-blue) 100%);
+        }
+
+        .analytics-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .analytics-container {
+                flex-direction: row;
+                gap: 4rem;
+            }
+        }
+
+        .analytics-visual {
+            flex: 1;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 25px;
+            border: 2px solid var(--innovation-teal);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid var(--electric-blue);
+            position: relative;
+            overflow: hidden;
         }
 
-        .cert-badge i {
-            font-size: 2.5rem;
-            color: var(--electric-blue);
+        .hologram-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hologram-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, var(--innovation-teal) 0%, var(--vibrant-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hologram-content p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .analytics-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .analytics-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--innovation-teal);
+            border-radius: 15px;
+            padding: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: var(--innovation-teal);
+        }
+
+        .stat-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+
+        .stat-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin: 0.8rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--innovation-teal), var(--vibrant-orange));
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+
+        .stat-info {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER SECTION */
+        footer {
+            background: linear-gradient(135deg, var(--deep-space) 0%, var(--primary-blue) 100%);
+            padding: 70px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        .footer-column h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: var(--innovation-teal);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--innovation-teal);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--innovation-teal);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: var(--innovation-teal);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* World Map Visualization */
+        .world-map {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--innovation-teal);
+            box-shadow: 0 0 30px rgba(0, 193, 212, 0.3);
+            background: linear-gradient(rgba(6, 18, 43, 0.8), rgba(6, 18, 43, 0.8)), 
+                        url('https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1794&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .map-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 80%;
+        }
+        
+        .map-overlay h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--innovation-teal);
+        }
+        
+        .map-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Mobile Menu */
+        .mobile-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(26, 59, 122, 0.95);
+                flex-direction: column;
+                padding: 1rem;
+                border-radius: 0 0 20px 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
     <!-- Background Effects -->
-    <div class="quantum-bg"></div>
-    <div class="matrix-rain" id="matrixRain"></div>
+    <div class="bg-animation"></div>
     <div class="particles" id="particles"></div>
 
     <!-- Navigation -->
-    <nav>
+    <nav id="mainNav">
         <div class="nav-container">
-            <div class="logo">TRACEMARK GLOBAL SERVICES LTD</div>
+            <div class="logo">TRACEMARK VENTURES</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#affiliate">Affiliate Power</a></li>
+                <li><a href="#ventures">Our Ventures</a></li>
                 <li><a href="#global">Global Programs</a></li>
-                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#traffic">AI Traffic</a></li>
                 <li><a href="#analytics">Analytics</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>REVOLUTIONARY DIGITAL ECOSYSTEM</h1>
-            <p>Tracemark Global Services: Transforming Affiliate Marketing with Quantum AI</p>
+            <h1>REVOLUTIONIZING AFFILIATE MARKETING</h1>
+            <p>Powered by TRACEMARK VENTURES - The Global Leader in Performance Marketing</p>
             <div class="quantum-badge">
-                <i class="fas fa-globe" style="margin-right: 10px;"></i>
-                OPERATING IN 47 COUNTRIES • 500+ GLOBAL PARTNERS
+                <i class="fas fa-bolt"></i> INNOVATION • PERFORMANCE • GROWTH
             </div>
             <div class="cta-buttons">
-                <a href="#global" class="cta-primary">Explore Programs</a>
-                <a href="#about" class="cta-secondary">About Us</a>
+                <a href="#ventures" class="cta-primary">Explore Ventures</a>
+                <a href="#global" class="cta-secondary">Partner With Us</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
+    <!-- TRACEMARK VENTURES SECTION -->
+    <section id="ventures" class="section ventures-section">
         <div class="container">
-            <h2 class="section-title">ABOUT TRACEMARK GLOBAL</h2>
-            <div class="about-content">
-                <div class="company-history">
-                    <h3>Our Journey</h3>
-                    <p>Founded in 2018, Tracemark Global Services Ltd has rapidly evolved into a leading force in the affiliate marketing industry. With headquarters in London and regional offices in Singapore, New York, and Dubai, we've built a global network that spans 47 countries.</p>
+            <h2 class="section-title">TRACEMARK VENTURES</h2>
+            <p class="section-subtitle">Leading the charge in affiliate marketing innovation since 2018</p>
+            
+            <div class="ventures-content">
+                <div class="ventures-text">
+                    <h2>The Future of Performance Marketing</h2>
+                    <p>TRACEMARK VENTURES is the innovative subsidiary of TRACEMARK GLOBAL SERVICES LTD, dedicated to revolutionizing the affiliate marketing landscape. We combine cutting-edge technology with strategic partnerships to create unparalleled growth opportunities for brands and affiliates worldwide.</p>
                     
-                    <p>Our mission is to democratize access to global markets through AI-powered affiliate solutions. We've helped over 15,000 affiliates and 800+ brands connect, resulting in $2.3B in generated revenue since our inception.</p>
+                    <p>Our proprietary AffiliateMarketingAI platform leverages quantum computing principles to optimize campaigns in real-time, delivering unprecedented ROI for our partners. With a global network spanning 47 countries, we've generated over $2.3B in revenue for our clients since inception.</p>
                     
-                    <div class="values-grid">
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-bullseye"></i></div>
-                            <h4>Our Mission</h4>
-                            <p>To revolutionize digital commerce through AI-driven affiliate ecosystems that create unprecedented value for brands and publishers globally.</p>
+                    <div class="ventures-stats">
+                        <div class="stat-card">
+                            <span class="stat-value">$2.3B+</span>
+                            <span class="stat-label">Revenue Generated</span>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-eye"></i></div>
-                            <h4>Our Vision</h4>
-                            <p>To become the world's most trusted AI-powered affiliate network by 2030, connecting 1M+ affiliates with 10K+ premium brands.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">47</span>
+                            <span class="stat-label">Global Markets</span>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-chart-line"></i></div>
-                            <h4>Growth</h4>
-                            <p>425% revenue growth since 2020, expanding to 47 countries with 120+ employees worldwide.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">800+</span>
+                            <span class="stat-label">Brand Partners</span>
                         </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-award"></i></div>
-                            <h4>Achievements</h4>
-                            <p>2024 Global Affiliate Platform of the Year, ranked #3 in Performance Marketing Innovation Index.</p>
+                        <div class="stat-card">
+                            <span class="stat-value">15K+</span>
+                            <span class="stat-label">Active Affiliates</span>
                         </div>
+                    </div>
+                    
+                    <div class="cta-buttons" style="margin-top: 2rem;">
+                        <a href="#global" class="cta-primary">Join Our Network</a>
+                        <a href="#analytics" class="cta-secondary">View Our Technology</a>
                     </div>
                 </div>
                 
-                <div>
-                    <h3>Core Technologies</h3>
-                    <p>Our proprietary technology stack combines quantum computing principles with machine learning to create the industry's most advanced affiliate marketing platform:</p>
-                    
-                    <div class="feature-box" style="margin-bottom: 1.5rem;">
-                        <h4><i class="fas fa-brain" style="color: var(--electric-blue); margin-right: 10px;"></i> QuantumMatch AI</h4>
-                        <p>Patented algorithm that matches affiliates with optimal programs using predictive analytics and behavioral modeling.</p>
-                    </div>
-                    
-                    <div class="feature-box" style="margin-bottom: 1.5rem;">
-                        <h4><i class="fas fa-bolt" style="color: var(--neon-green); margin-right: 10px;"></i> RevenueBoost Engine</h4>
-                        <p>Real-time optimization system that increases conversions by up to 73% through dynamic content personalization.</p>
-                    </div>
-                    
-                    <div class="feature-box">
-                        <h4><i class="fas fa-shield-alt" style="color: var(--fire-red); margin-right: 10px;"></i> FraudShield Protection</h4>
-                        <p>Blockchain-verified transaction security with 99.97% fraud detection accuracy.</p>
-                    </div>
-                    
-                    <div class="quantum-badge" style="margin-top: 2rem; display: inline-block;">
-                        <i class="fas fa-certificate" style="margin-right: 10px;"></i>
-                        ISO 27001 Certified • GDPR Compliant
-                    </div>
+                <div class="ventures-visual">
+                    <svg class="ventures-logo" viewBox="0 0 500 200">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00c1d4; stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff8c42; stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M50,100 Q100,50 150,100 T250,100 Q300,80 350,100 T450,100" fill="none" stroke="url(#logo-gradient)" stroke-width="10" />
+                        <text x="250" y="150" text-anchor="middle" font-size="40" font-weight="bold" fill="url(#logo-gradient)">TRACEMARK VENTURES</text>
+                    </svg>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Affiliate Marketing Powerhouse -->
-    <section id="affiliate" class="section affiliate-powerhouse">
-        <!-- Content unchanged -->
     </section>
 
     <!-- Global Affiliate Programs -->
     <section id="global" class="section global-programs">
         <div class="container">
             <h2 class="section-title">GLOBAL AFFILIATE PROGRAMS</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Access premium affiliate programs from our global network of 800+ brands across 47 countries.
-            </p>
+            <p class="section-subtitle">Powered by TRACEMARK VENTURES - Access premium affiliate programs across diverse markets</p>
             
-            <!-- 3D Globe Container -->
-            <div class="globe-container" id="globeContainer">
-                <!-- Globe will be rendered here by Three.js -->
+            <!-- World Map Visualization -->
+            <div class="world-map">
+                <div class="map-overlay">
+                    <h3>Global Affiliate Network</h3>
+                    <p>47 countries • 800+ brand partners • 15,000+ active affiliates</p>
+                </div>
             </div>
             
             <div class="programs-grid">
-                <!-- Existing programs -->
                 <div class="program-card">
                     <div class="program-flag">🇺🇸</div>
                     <h3 class="program-title">USA Tech Gadgets</h3>
@@ -340,161 +943,105 @@
                         <li>Strong brand loyalty</li>
                     </ul>
                 </div>
-                
-                <!-- New programs added -->
-                <div class="program-card">
-                    <div class="program-flag">🇦🇪</div>
-                    <h3 class="program-title">Middle East Luxury</h3>
-                    <div class="program-commission">Up to 70%</div>
-                    <p>High-end luxury goods for the Middle Eastern market.</p>
-                    <ul class="program-features">
-                        <li>Exclusive designer collections</li>
-                        <li>VIP client access</li>
-                        <li>Regional exclusivity</li>
-                        <li>Highest commissions in industry</li>
-                    </ul>
-                </div>
-                
-                <div class="program-card">
-                    <div class="program-flag">🇧🇷</div>
-                    <h3 class="program-title">Brazilian Cosmetics</h3>
-                    <div class="program-commission">Up to 60%</div>
-                    <p>Natural beauty products from Brazil's rainforest.</p>
-                    <ul class="program-features">
-                        <li>Fastest growing beauty market</li>
-                        <li>Ethically sourced ingredients</li>
-                        <li>High social media conversion</li>
-                        <li>Recurring subscription model</li>
-                    </ul>
-                </div>
-                
-                <div class="program-card">
-                    <div class="program-flag">🇮🇳</div>
-                    <h3 class="program-title">India Digital Services</h3>
-                    <div class="program-commission">Up to 50%</div>
-                    <p>Digital products for India's booming tech market.</p>
-                    <ul class="program-features">
-                        <li>1.4B potential customers</li>
-                        <li>Recurring revenue streams</li>
-                        <li>Localized payment options</li>
-                        <li>Multi-lingual support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Leadership Section -->
-    <section id="leadership" class="section leadership-section">
-        <div class="container">
-            <h2 class="section-title">EXECUTIVE LEADERSHIP</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Our experienced leadership team brings decades of expertise in technology, marketing, and global commerce.
-            </p>
-            
-            <div class="leadership-grid">
-                <div class="executive-card">
-                    <div class="executive-photo"></div>
-                    <h3>Alexander Vance</h3>
-                    <h4>Founder & CEO</h4>
-                    <p>Former Global Head of Affiliate Marketing at TechCommerce Inc. 15+ years experience in performance marketing.</p>
-                    <div class="executive-social">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                
-                <div class="executive-card">
-                    <div class="executive-photo"></div>
-                    <h3>Dr. Samantha Reyes</h3>
-                    <h4>Chief AI Officer</h4>
-                    <p>PhD in Quantum Computing, MIT. Developed proprietary algorithms powering our AI ecosystem.</p>
-                    <div class="executive-social">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-                
-                <div class="executive-card">
-                    <div class="executive-photo"></div>
-                    <h3>James Chen</h3>
-                    <h4>Global Operations Director</h4>
-                    <p>Built affiliate networks across Asia-Pacific. Fluent in 5 languages with deep regional expertise.</p>
-                    <div class="executive-social">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-globe-asia"></i></a>
-                    </div>
-                </div>
-                
-                <div class="executive-card">
-                    <div class="executive-photo"></div>
-                    <h3>Elena Petrova</h3>
-                    <h4>Head of Strategic Partnerships</h4>
-                    <p>Former Brand Partnerships at Amazon. Established 200+ premium brand relationships.</p>
-                    <div class="executive-social">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- AI Traffic Generation Hub -->
     <section id="traffic" class="section ai-traffic-hub">
-        <!-- Content unchanged -->
+        <div class="container">
+            <h2 class="section-title">AI-POWERED TRAFFIC GENERATION</h2>
+            <p class="section-subtitle">TRACEMARK VENTURES drives targeted traffic through multiple channels to maximize conversions</p>
+            
+            <div class="channel-grid">
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Website Integration</h3>
+                    <p>Seamlessly integrate affiliate offers with AI-optimized placements.</p>
+                    <div class="channel-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">+42%</div>
+                            <div class="stat-label">CTR Increase</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3.2x</div>
+                            <div class="stat-label">ROI Boost</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h3>Social Media</h3>
+                    <p>AI-generated content and targeting across all major platforms.</p>
+                    <div class="channel-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">2.7M</div>
+                            <div class="stat-label">Monthly Reach</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">+68%</div>
+                            <div class="stat-label">Engagement</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3>Podcast Network</h3>
+                    <p>Reach engaged audiences through our network of 500+ podcasts.</p>
+                    <div class="channel-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">15M</div>
+                            <div class="stat-label">Monthly Listeners</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">+52%</div>
+                            <div class="stat-label">Conversion Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email & Newsletter</h3>
+                    <p>AI-personalized email campaigns that convert subscribers.</p>
+                    <div class="channel-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">38%</div>
+                            <div class="stat-label">Open Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">8.5%</div>
+                            <div class="stat-label">Click Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Quantum Analytics -->
     <section id="analytics" class="section quantum-analytics">
         <div class="container">
             <h2 class="section-title">QUANTUM AI ANALYTICS</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Predictive analytics and real-time insights powered by quantum computing principles.
-            </p>
+            <p class="section-subtitle">TRACEMARK VENTURES' predictive analytics and real-time insights</p>
             
             <div class="analytics-container">
                 <div class="analytics-visual">
-                    <div class="hologram">
-                        <div class="hologram-content">
-                            <h3>ADVANCED AI ANALYTICS PLATFORM</h3>
-                            <p>Our proprietary QuantumCore engine processes 2.7B data points daily to deliver unparalleled market insights and predictive analytics.</p>
-                            
-                            <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: left; max-width: 500px;">
-                                <div style="display: flex; align-items: center;">
-                                    <i class="fas fa-microchip" style="color: var(--electric-blue); font-size: 2rem; margin-right: 1rem;"></i>
-                                    <div>
-                                        <div style="font-size: 1.5rem; font-weight: bold;">28 TB</div>
-                                        <div>Daily Data Processed</div>
-                                    </div>
-                                </div>
-                                
-                                <div style="display: flex; align-items: center;">
-                                    <i class="fas fa-bolt" style="color: var(--neon-green); font-size: 2rem; margin-right: 1rem;"></i>
-                                    <div>
-                                        <div style="font-size: 1.5rem; font-weight: bold;">92%</div>
-                                        <div>Prediction Accuracy</div>
-                                    </div>
-                                </div>
-                                
-                                <div style="display: flex; align-items: center;">
-                                    <i class="fas fa-globe" style="color: var(--fire-red); font-size: 2rem; margin-right: 1rem;"></i>
-                                    <div>
-                                        <div style="font-size: 1.5rem; font-weight: bold;">47</div>
-                                        <div>Markets Covered</div>
-                                    </div>
-                                </div>
-                                
-                                <div style="display: flex; align-items: center;">
-                                    <i class="fas fa-sync-alt" style="color: var(--vibrant-yellow); font-size: 2rem; margin-right: 1rem;"></i>
-                                    <div>
-                                        <div style="font-size: 1.5rem; font-weight: bold;">Real-time</div>
-                                        <div>Market Analysis</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="hologram-content">
+                        <h3>REAL-TIME PERFORMANCE ANALYTICS</h3>
+                        <p>Our quantum AI analyzes billions of data points to predict market trends and optimize campaigns.</p>
+                        <div class="quantum-badge">
+                            <i class="fas fa-bolt"></i> LIVE DATA STREAMING
                         </div>
                     </div>
                 </div>
@@ -547,93 +1094,6 @@
                             <span>87%</span>
                         </div>
                     </div>
-
-                    <div class="stat-card">
-                        <h4>Fraud Detection</h4>
-                        <p>Accuracy in identifying fraudulent activities</p>
-                        <div class="stat-bar">
-                            <div class="stat-progress" style="width: 99.7%;"></div>
-                        </div>
-                        <div class="stat-info">
-                            <span>Accuracy</span>
-                            <span>99.7%</span>
-                        </div>
-                    </div>
-
-                    <div class="stat-card">
-                        <h4>Processing Speed</h4>
-                        <p>Compared to traditional analytics platforms</p>
-                        <div class="stat-bar">
-                            <div class="stat-progress" style="width: 95%;"></div>
-                        </div>
-                        <div class="stat-info">
-                            <span>Faster</span>
-                            <span>95x</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials-section">
-        <div class="container">
-            <h2 class="section-title">CLIENT SUCCESS STORIES</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: rgba(255,255,255,0.8);">
-                Hear from brands and affiliates who have transformed their businesses with our platform.
-            </p>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Tracemark's AI optimization increased our affiliate revenue by 187% in just 6 months. The predictive analytics helped us enter 3 new markets successfully."</p>
-                    <div class="client-info">
-                        <div class="client-avatar"></div>
-                        <div>
-                            <h4>Michael Tanaka</h4>
-                            <p>CEO, GlobalTech Solutions</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p>"As an affiliate, I've worked with many networks. Tracemark's commission structure and real-time analytics are unmatched. My earnings increased 3x after switching."</p>
-                    <div class="client-info">
-                        <div class="client-avatar"></div>
-                        <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>Top Performing Affiliate</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p>"The FraudShield system saved us over $2M in potential losses last year. Tracemark's security measures give us confidence to scale our affiliate program globally."</p>
-                    <div class="client-info">
-                        <div class="client-avatar"></div>
-                        <div>
-                            <h4>David Chen</h4>
-                            <p>CFO, Luxury Brands Group</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="certifications">
-                <div class="cert-badge">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="cert-badge">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <div class="cert-badge">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <div class="cert-badge">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <div class="cert-badge">
-                    <i class="fas fa-award"></i>
                 </div>
             </div>
         </div>
@@ -644,11 +1104,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h4>TRACEMARK GLOBAL SERVICES LTD</h4>
-                    <p>Revolutionizing affiliate marketing through AI and quantum computing technologies.</p>
-                    <p>Registered in England & Wales</p>
-                    <p>Company No: 11234567</p>
-                    <p>VAT No: GB 123 4567 89</p>
+                    <h4>TRACEMARK VENTURES</h4>
+                    <p>A subsidiary of TRACEMARK GLOBAL SERVICES LTD</p>
+                    <p>Leading affiliate marketing innovation since 2018</p>
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -660,11 +1118,11 @@
                 <div class="footer-column">
                     <h4>NAVIGATION</h4>
                     <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#affiliate">Affiliate Power</a></li>
+                        <li><a href="#ventures">Our Ventures</a></li>
                         <li><a href="#global">Global Programs</a></li>
-                        <li><a href="#leadership">Leadership</a></li>
-                        <li><a href="#analytics">Quantum Analytics</a></li>
+                        <li><a href="#traffic">AI Traffic</a></li>
+                        <li><a href="#analytics">Analytics</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -676,42 +1134,97 @@
                         <li><a href="#">Market Reports</a></li>
                         <li><a href="#">Webinars</a></li>
                         <li><a href="#">API Documentation</a></li>
-                        <li><a href="#">Compliance Center</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h4>CONTACT</h4>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> info@traceglobal.com</li>
-                        <li><i class="fas fa-phone"></i> +44 (0)20 7123 4567</li>
+                        <li><i class="fas fa-envelope"></i> ventures@tracemarkglobal.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
                         <li><i class="fas fa-map-marker-alt"></i> Global Headquarters</li>
-                        <li>1 Affiliate Plaza, London E1 6LT, UK</li>
-                        <li><br><strong>Regional Offices:</strong></li>
-                        <li>New York • Singapore • Dubai</li>
+                        <li>Silicon Valley, CA</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                &copy; 2025 TRACEMARK GLOBAL SERVICES LTD. All rights reserved. Revolutionizing digital marketing through quantum AI.
-                <div style="margin-top: 1rem; font-size: 0.9rem;">
-                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Privacy Policy</a>
-                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Terms of Service</a>
-                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Compliance</a>
-                    <a href="#" style="color: rgba(255,255,255,0.5); margin: 0 1rem;">Cookie Policy</a>
-                </div>
+                &copy; 2025 TRACEMARK VENTURES. All rights reserved. Revolutionizing affiliate marketing through quantum AI.
             </div>
         </div>
     </footer>
 
-    <!-- AI Assistant -->
-    <div class="ai-assistant">
-        <i class="fas fa-robot"></i>
-    </div>
-
     <script>
-        // Existing JavaScript remains unchanged
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        const particleCount = 80;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+            particle.style.width = `${Math.random() * 4 + 2}px`;
+            particle.style.height = particle.style.width;
+            
+            particlesContainer.appendChild(particle);
+        }
+        
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
+                    
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate progress bars when in view
+        const progressBars = document.querySelectorAll('.stat-progress');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 300);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        progressBars.forEach(bar => {
+            observer.observe(bar);
+        });
     </script>
 </body>
 </html>
